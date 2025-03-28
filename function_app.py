@@ -257,26 +257,26 @@ class RMADAAnalyzer:
         return all_docs
 
     def load_requirements(self) -> pd.DataFrame:
-        """Load requirements from the Excel file, filtering for rows with 'red' in the Rating column."""
+        """Load requirements from the Excel file, assuming requirements are in column A (index 0)."""
         try:
             df = pd.read_excel(self.EXCEL_PATH)
             
-            if "SOW Relevance" not in df.columns:
-                logging.error("Column 'SOW Relevance' not found in Excel file!")
+            # Get the first column (column A or index 0) as requirements
+            if len(df.columns) == 0:
+                logging.error("Excel file has no columns!")
                 return None
                 
-            if "Rating" not in df.columns:
-                logging.warning("Column 'Rating' not found in Excel file! Proceeding without filtering.")
-            else:
-                # Filter to only include rows with "red" rating
-                red_rows = df[df["Rating"].astype(str).str.lower() == "red"]
-                logging.info(f"Filtered from {len(df)} total requirements to {len(red_rows)} 'red' rated requirements")
-                df = red_rows
-                
-                if len(df) == 0:
-                    logging.warning("No rows with 'red' rating found. Check your Excel data.")
+            # Get the first column name
+            first_column = df.columns[0]
+            logging.info(f"Using column '{first_column}' for requirements")
             
+            # Check if the column exists and has data
+            if df[first_column].isnull().all():
+                logging.warning(f"Column '{first_column}' has no data")
+            
+            logging.info(f"Loaded {len(df)} requirements from Excel file")
             return df
+            
         except Exception as e:
             logging.error(f"Error loading Excel file: {e}")
             return None
@@ -359,9 +359,7 @@ class RMADAAnalyzer:
         0 - No relevant experience
         1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)
         2 - Significant Relevant Experience
-        
-        Please consider the document titles to determine if the work was performed for CMMI. If the title doesn't clearly indicate CMS/CMMI work, be careful about assigning a level 1 rating.
-        
+                
         Provide ONLY a single integer (0, 1, or 2) with no explanation or additional text.
         """
         
@@ -427,8 +425,11 @@ class RMADAAnalyzer:
         
         logging.info(f"Processing {len(requirements_to_process)} requirements")
         
+        # Get the first column name
+        first_column = requirements_to_process.columns[0]
+        
         for idx, row in requirements_to_process.iterrows():
-            requirement = row["SOW Relevance"]
+            requirement = row[first_column]
             logging.info(f"Processing requirement {idx+1}/{len(requirements_to_process)}: {requirement[:50]}...")
             
             # Find related sentences
@@ -464,9 +465,10 @@ def rmada_trigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('RMADA document analysis function triggered.')
     
     try:
+        excel_file = req.params.get("excelFile", None)
         # Hardcode the documents directory and excel file path
         documents_dir = os.path.join(os.getcwd(), "Documents", "sows")
-        excel_path = os.path.join(os.getcwd(), "Documents", "matrices", "RMADA3_SOFTDEV.xlsx")
+        excel_path = os.path.join(os.getcwd(), "Documents", "matrices", excel_file)
         
         # Only mode is specified in the request (default to 'test' if not provided)
         mode = req.params.get('mode', 'test')

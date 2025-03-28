@@ -1,0 +1,462 @@
+[
+  {
+    "requirement": "Experience with technical or policy prerequisites needed to develop and implement a National Provider Directory. ",
+    "matches": [
+      {
+        "sentence": "This delegation\u2019s efforts included adoption of the National Provider Identifier (NPI) and development of the NPPES.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5412236147823166
+      },
+      {
+        "sentence": "This delegation\u2019s efforts included adoption of the National Provider Identifier (NPI) and development of the NPPES.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5412236147823166
+      },
+      {
+        "sentence": "This includes applying domain expertise to business problems, developing and defining strategic visions, providing client representation, and support.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.47615060750247223
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 0
+  },
+  {
+    "requirement": "Understanding of healthcare directory challenges and methods to minimize risks and challenges.",
+    "matches": [
+      {
+        "sentence": "We develop and implement approaches driven by a multi -dimensional risk framework, coupled with qualitative and quantitative analyses; medical record review and financial and legal analyses; and data visualization and dashboard creation.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.540157306360465
+      },
+      {
+        "sentence": "sets us apart in health data development and maintenance.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.516651167067769
+      },
+      {
+        "sentence": "sets us apart in health data development and maintenance.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.516651167067769
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 1
+  },
+  {
+    "requirement": "Experience with a phased approach to establishing a centralized data hub for accurate provider directory information. ",
+    "matches": [
+      {
+        "sentence": "We apply advanced data analytics to monitor provider and provider entity behavior.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.4952229680554496
+      },
+      {
+        "sentence": "Developing and maintaining a Data Warehouse.",
+        "document": "PP_Consolidated_DEX.pdf",
+        "similarity_score": 0.4761843645077895
+      },
+      {
+        "sentence": "We service over 60 million total providers in our database.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.47138929895522463
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 2
+  },
+  {
+    "requirement": "Experience integrating data from CMS Systems such as NPPES, PECOS, Medicare Care Compare into a centralized data hub.",
+    "matches": [
+      {
+        "sentence": "The data from NPPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6939681124414654
+      },
+      {
+        "sentence": "The data from NPPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6939681124414654
+      },
+      {
+        "sentence": "The data from NPPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6939681124414654
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 3
+  },
+  {
+    "requirement": "Experience with modern data exchange capabilities to include experience incorporating FHIR and APIs",
+    "matches": [
+      {
+        "sentence": "\u2022 MIDAS: Our O&M expertise exemplifies our capability to effectively manage complex, cloud -based data integration systems.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5751095001658707
+      },
+      {
+        "sentence": "This effort includes providing digital contact information such as secure digital endpoints (e.g., Direct Address and/or Fast Healthcare Interoperability Res ource [FHIR] API endpoint).",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5547687942680638
+      },
+      {
+        "sentence": "To enhance data handling, MIDAS uses diverse methods such as EFT and REST APIs to ingest 30 data sources, establishing seamless data retrieval and interfacing with external applications.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.546658337333232
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 4
+  },
+  {
+    "requirement": "Experience other CMS/HHS/State/Local systems and data elements that should interact with national provider directory to further scale and streamline provider and payer data and improve the value and usability of that data. ",
+    "matches": [
+      {
+        "sentence": "The data from N PPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5501559956731967
+      },
+      {
+        "sentence": "The data from N PPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5501559956731967
+      },
+      {
+        "sentence": "The data from N PPES is disseminated to multiple downstream CMS systems and externally to the nation\u2019s healthcare delivery and payment networks.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5501559956731967
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 5
+  },
+  {
+    "requirement": "Experience with data aggregation such as linking and combining datasets into a single interface to display complex information.  ",
+    "matches": [
+      {
+        "sentence": "We integrate data from multiple sources, providing data management, analytics support, security, and operational dashboards.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5751422471841461
+      },
+      {
+        "sentence": "We have demonstrated our ability to combine, correlate , and link appeals data with other relevant data sources .",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.561339107483372
+      },
+      {
+        "sentence": "The primary challenge was integrating disparate data sources into a unified system that could offer reliable, real -time data to stakeholders.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5220819619048641
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 6
+  },
+  {
+    "requirement": "Experience overcoming interoperability challenges when integrating data from CMS systems into a centralized data hub. ",
+    "matches": [
+      {
+        "sentence": "\u2022 MIDAS: Our O&M expertise exemplifies our capability to effectively manage complex, cloud -based data integration systems.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.6172305188015665
+      },
+      {
+        "sentence": "Through these efforts, MIDAS has demonstrated an exceptional ability to manage complex data ecosystems, enhan cing service reliability and customer support across CMS's operational landscape.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5813138585845707
+      },
+      {
+        "sentence": "CMS Multidimensional Information Data Analytics System (MIDAS): Our O&M expertise exemplifies our capability to effectively manage complex, cloud -based data integration systems.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5756249136877055
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 7
+  },
+  {
+    "requirement": "Experience interfacing/exchanging directory data with other CMS or HHS systems.",
+    "matches": [
+      {
+        "sentence": "We develop/implement processes to collect, scrub, link, and store data from CMS environments to improve source data quality.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.5632825156138147
+      },
+      {
+        "sentence": "On the CSMM contract, we have used Team FedPath and CMS SharePoint sites to store and share critical information with CMS and other contractors.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.5474804341693879
+      },
+      {
+        "sentence": "We develop and implement processes to collect, scrub, link, and s tore data from CMS environments to improve source data quality.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.5006971748939166
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 8
+  },
+  {
+    "requirement": "Experience developing a nationwide system rollout plan and executing a wave-based approach to the implementation. ",
+    "matches": [
+      {
+        "sentence": "We develop and deliver a Systems Operations Maintenance Plan that covers areas such as system release plans, software configuration management maintenanc e procedures, quality assurance plans, software process improvement plans, and a communication plan & approach.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.488442193873137
+      },
+      {
+        "sentence": "We oversee the entire system lifecycle, from requirements, analysis, design, de velopment, integration, user acceptance testing, deployment, and production support to subsequent system enhancements.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.4849298078250038
+      },
+      {
+        "sentence": "The process entailed a 3 -month phased plan, thoroughly outlining work -in-progress and production cutovers.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.4847780547478701
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 9
+  },
+  {
+    "requirement": "Experience with human-centered design methods to optimize usability.",
+    "matches": [
+      {
+        "sentence": "We adhere to Human Centered Design (HCD) approach to enhance effectiveness and efficiency and to improve user satisfaction, accessibility, and sustainability.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.7437997316065519
+      },
+      {
+        "sentence": "F Understanding What People N eed: The NPPES Human -centered Design (HCD) approach is utilized to enhance system effectiveness and efficiency and improve user satisfaction, accessibility, and sustainability.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.631733841561164
+      },
+      {
+        "sentence": "Implement Quality Improvements Based on Customer Support Requests and Inquiries, and Feedback from Customers Through On-Going Human Centered Design.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6070043837697386
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 10
+  },
+  {
+    "requirement": "Experience with the system development lifecycle on a phased development and implementation of a CMS system.",
+    "matches": [
+      {
+        "sentence": "Our modernization includes APIs, user -friendly portals, and quality assurance, meeting CMS Target Life Cycle requirements in CMS -provided cloud environments.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.6900724068301891
+      },
+      {
+        "sentence": "Providing full system life cycle from requirements, design, development, integration, acceptance testing, deployment, and production support in compliance with the CMS Target Life Cycle (TLC) at CMMI Level 3 or higher (company level) or a similar Life Cycle.",
+        "document": "PP_Consolidated_DEX.pdf",
+        "similarity_score": 0.6594421327384541
+      },
+      {
+        "sentence": "Providing full system life cycle from requirements, design, development, integration, acceptance testing, deployment, and production support in compliance with the CMS Target Life Cycle (TLC) at CMMI Level 3 or higher (company level) or a similar Life Cycle .",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6594421327384541
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 11
+  },
+  {
+    "requirement": "Experience developing and implementing project management plan to successfully execute on contract milestones and deliverables. ",
+    "matches": [
+      {
+        "sentence": "Our Project Management Plan (PMP), thorough understanding of the Statement of Work (SOW), and our agile approach have ensured su ccess on the contract.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.6979280292224932
+      },
+      {
+        "sentence": "Project management uses a hybrid Lean/Agile approach , efficient meeting planning and execution, meeting agendas and minutes, establishment of a Quality Assurance Plan, and smooth contractor transition processes.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.672348361035194
+      },
+      {
+        "sentence": "The ASETT project management approach includes the project schedule and estimating metrics, the management control framework, and the quality and risk management approaches necessary to successfully execute this project.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.6437937807407212
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 12
+  },
+  {
+    "requirement": "Experience gathering consumer/industry input while developing minimum viable product.",
+    "matches": [
+      {
+        "sentence": "Our process is a proven methodology that maximizes the delivery of high -quality products while also ensuring our customers are well informed.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.595287169513974
+      },
+      {
+        "sentence": "Our process maximizes the delivery of low risk, high -quality product s while ensuring our customers are well informed.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5756156154284795
+      },
+      {
+        "sentence": "Of key importance is understanding what people need and how the product being developed addresses those needs.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5482350025403021
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 13
+  },
+  {
+    "requirement": "Experience building trust with stakeholders during phased development.to ensure viability of system across stakeholders. ",
+    "matches": [
+      {
+        "sentence": "Stakeholders (clients, users, etc.)",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.6098290592903097
+      },
+      {
+        "sentence": "Our approach emphasizes stakeholder engagement, including internal and external parties, to thoroughly manage requirements through Needs, Use, an d Test Cases that define and scope requirements effectively.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5933368299776797
+      },
+      {
+        "sentence": "Involved Stakeholders .",
+        "document": "PP_Consolidated_TSA BPA.pdf",
+        "similarity_score": 0.5906916447206677
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 14
+  },
+  {
+    "requirement": "Experience evaluating new systems to determine if it achieves the targeted outcomes for end users - reduces burden, meets benefits, simplifies access to care, saves providers time, etc. - and adapt to achieve targeted outcomes.",
+    "matches": [
+      {
+        "sentence": "In the initial stages, we identify system changes from the users\u2019 perspective to deliver solutions t hat primaril y focus on easing burdens the health care community faces when using ASETT.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.6481680306688632
+      },
+      {
+        "sentence": "W e also prioritized evaluating systems to gauge their effectiveness in meeting business needs and strategic objectives.",
+        "document": "PP_Consolidated_IT Modernization.pdf",
+        "similarity_score": 0.5611070098764274
+      },
+      {
+        "sentence": "This includes ensuring the product's usability, effectiveness, adoption, and overall success.",
+        "document": "PP_Consolidated_DEX.pdf",
+        "similarity_score": 0.5400898071574977
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 15
+  },
+  {
+    "requirement": "Experience implementing security standards at CMS.",
+    "matches": [
+      {
+        "sentence": "Security practice s are in place t o adhere to all CMS federal requirements and support compliance with the CMS Information Security Program and its requirements.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.7722757796994146
+      },
+      {
+        "sentence": "We address compliance requirements for CMS Enterprise and implement and customize key features such as multi -user access, work flow and scheduling capabilities, centralized database, data analysis tools and stringent security standards.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.7244162393534198
+      },
+      {
+        "sentence": "We address compliance requirements for the CMS Enterprise and implement and customize key features such as multi -user access, workflow and scheduling capabilities, centralized database, data analysis tools and stringent security standards.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.7235749777451431
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 16
+  },
+  {
+    "requirement": "Experience implementing a tracking system to monitor system and implementation/rollout metrics. ",
+    "matches": [
+      {
+        "sentence": "\u2022 Metrics reports to monitor and analyze operations and performance.",
+        "document": "PP_Consolidated_PM3.pdf",
+        "similarity_score": 0.6432733555519934
+      },
+      {
+        "sentence": "We use dashboards to track and report compliance review activities, and our automated system improves audit communications.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.6285345519348092
+      },
+      {
+        "sentence": "We implemented a r eview system with built in timelines for tracking .",
+        "document": "PP_Consolidated_CMS RVC.pdf",
+        "similarity_score": 0.6012064868823909
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 17
+  },
+  {
+    "requirement": "Experience operating and maintaining a ticket-routing system to effectively conduct ticket handling, triaging and resolutions functions required by CMS. ",
+    "matches": [
+      {
+        "sentence": "On a weekly basis, metrics related to ticket volume and type, are analyzed and reviewed with the CMS client team.",
+        "document": "PP_Consolidated_ASETT.pdf",
+        "similarity_score": 0.5785750586185224
+      },
+      {
+        "sentence": "For ticketing and email handling, we implemented ServiceNow, and automated integration across CRM and NPPES applications to reduce manual entries.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5696229280244787
+      },
+      {
+        "sentence": "We implemented an automated system using ServiceNow to manage and track all Ti er 1, Tier 2, and Tier 3 help desk cases, tickets, and emails, and we report weekly to CMS leadership.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.537834234922167
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 18
+  },
+  {
+    "requirement": "Experience utilizing AI and ML tools for data aggregation.",
+    "matches": [
+      {
+        "sentence": "This program enhances CMS \u2019s data aggregation and analysis capabilities to support the health insurance marketplace efficiently.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.5205346594846352
+      },
+      {
+        "sentence": "We utilize data warehouses and analytic / business intelligence (BI) tools (e.g., SAS, IBM Cognos, Quick Sight, Databricks).",
+        "document": "PP_Consolidated_CMS DMDG.pdf",
+        "similarity_score": 0.5142262508570574
+      },
+      {
+        "sentence": "Data Management & Analysis Experience: Working with data warehouses and analytic / business intelligence (BI) tools (e.g., SAS, IBM Cognos, Quick Sight, Databricks) Commented [LH2]: Note above: we don\u2019t do this.o",
+        "document": "PP_Consolidated_CMS DMDG.pdf",
+        "similarity_score": 0.4966624714907885
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 19
+  }
+]
