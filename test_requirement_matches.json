@@ -1,0 +1,232 @@
+[
+  {
+    "requirement": "* Supporting all aspects of model design and operations (except information technology)",
+    "matches": [
+      {
+        "sentence": "We implement a Tiered Support Structure .",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5422864405421045
+      },
+      {
+        "sentence": "Provide technical assistance to model sites.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.5416539539790056
+      },
+      {
+        "sentence": "Our Compliance Strategy provides an overarching structure and methodology to perform a range of compliance activities across the four models to verify that model participants, through their operations and activities, comply with the requirements and standards outlined in the model -specific Participation Agreement.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.5386638405352377
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 1
+  },
+  {
+    "requirement": "* Conducting program, data, and environmental analyses",
+    "matches": [
+      {
+        "sentence": "Conduct routine program monitoring activities.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.5814222409939989
+      },
+      {
+        "sentence": "Our team assesses the impact of prevention efforts at the local, state, and national levels by integrating, analyzing, and using program surveillance, and other data.",
+        "document": "PP_Consolidated_CDC Data Management DHP.pdf",
+        "similarity_score": 0.5575292245457559
+      },
+      {
+        "sentence": "Our team assesses the impact of prevention efforts at the local, state, and national levels by integrating, analyzing, and using program surveillance, and other data.",
+        "document": "PP_Consolidated_CDC Data Management DHP.pdf",
+        "similarity_score": 0.5575292245457559
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 2
+  },
+  {
+    "requirement": "* Monitoring model site implementations",
+    "matches": [
+      {
+        "sentence": "We monitor our hosting environment daily, including resources, systems, jobs, lo gging, auditing, and processes, to enable seamless functionality as per design expectations.",
+        "document": "PP_Consolidated_DEX.pdf",
+        "similarity_score": 0.5664305579613702
+      },
+      {
+        "sentence": "Provide technical assistance to model sites.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.5595406091052013
+      },
+      {
+        "sentence": "This encompasses daily evaluations of hosting components, systems, jobs, and processes to verify they function optimally, alongside active monitoring and alert mechanisms that enable application stability and security.",
+        "document": "PP_Consolidated_MIDAS.pdf",
+        "similarity_score": 0.552958881049982
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 3
+  },
+  {
+    "requirement": "* Designing and carrying out surveys and other primary data collection activities",
+    "matches": [
+      {
+        "sentence": "We c onduct ed surveys of the recipients on how we can better support their needs, to drive continuous process and improvement and facilitated routine conferences or calls and webinars (Task 4) .",
+        "document": "PP_Consolidated_MACRA CATA.pdf",
+        "similarity_score": 0.5556496986067793
+      },
+      {
+        "sentence": "Our work closely aligns with the needs identified in the EAOS initiative, providing relatable research, data management , mixed -mode data collection, and analytic and reporting support to DHP .",
+        "document": "PP_Consolidated_CDC Data Management DHP.pdf",
+        "similarity_score": 0.49982480464040446
+      },
+      {
+        "sentence": "Once the data is collected it is analyzed to examine course survey responses, who attended verses who enrolled, opportunities to enhance the workshop content, and an y need to update content due to changing directives, regulations, or SOPs.",
+        "document": "PP_Consolidated_TSA BPA.pdf",
+        "similarity_score": 0.4992602664963088
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 4
+  },
+  {
+    "requirement": "* Obtaining and analyzing secondary data sources, including data regarding Medicare, Medicaid, and the Children\u2019s Health Insurance Program (CHIP) and  data from private payer sources needed to support model design, operations, and evaluations",
+    "matches": [
+      {
+        "sentence": "Demonstrate your knowledge & past experience with Medicare, Medicaid, or Healthcare data.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.6616751820171147
+      },
+      {
+        "sentence": "Our reports on the Medicare program outlays display our ability to present complex data to non -technical audiences.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.6282574484746632
+      },
+      {
+        "sentence": "Our reports on Medicare program outlays display our ability to present complex data to non -technical audiences.",
+        "document": "PP_Consolidated_PCG_Data Analysis.pdf",
+        "similarity_score": 0.6246680384464632
+      }
+    ],
+    "relevance_score": 1,
+    "assessment": "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)",
+    "excel_row_index": 5
+  },
+  {
+    "requirement": "* Reporting on formative and summative analyses",
+    "matches": [
+      {
+        "sentence": "The result of the analysis is then incorporated into our reports which are developed in collaboration with clinical SMEs and CMS and disseminated to inform and educate the provider community.",
+        "document": "PP_Consolidated_CBR-PEPPER.pdf",
+        "similarity_score": 0.5719327541658306
+      },
+      {
+        "sentence": "\u2022 Translated qualitative contextual reports to compelling infographics, DHP divisional and public -facing reports; translated complex quantitative analytic findings to automated, user -friendly reports, dashboards, and visualizations.",
+        "document": "PP_Consolidated_CDC Data Management DHP.pdf",
+        "similarity_score": 0.5218419859450887
+      },
+      {
+        "sentence": "We foster collaborative di scussions on methodological differences and verify complex data reports are comprehensible to both statisticians and laypeople.",
+        "document": "PP_Consolidated_CMS SSOE.pdf",
+        "similarity_score": 0.5156640628751671
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 6
+  },
+  {
+    "requirement": "* Providing rapid cycle evaluation feedback to CMS and model participants",
+    "matches": [
+      {
+        "sentence": "Manage & coordinate activities related to assessment and feedback, use of data for improvement, and measuring performance towards model aims to support and accelerate the ongoing learning of organizations involved in CMS models.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.6262790519867756
+      },
+      {
+        "sentence": "Our participation in CMS IRR reviews, robust training program, and internal 10 -30% QA reviews ensure high-quality outcomes, recognized in annual performance evaluations by CMS.",
+        "document": "PP_Consolidated_CMS RVC.pdf",
+        "similarity_score": 0.5596747981923444
+      },
+      {
+        "sentence": "Our analytic validation work is conceptually similar to the CMS EAOS needs .",
+        "document": "PP_Consolidated_CMS SSOE.pdf",
+        "similarity_score": 0.5301767851624469
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 7
+  },
+  {
+    "requirement": "* Creating summative reports of annual and final program findings",
+    "matches": [
+      {
+        "sentence": "We maintain updated project documents , submit Monthly Status Reports of tasks and activities, and provide a detailed Annual Summary Report with findings and recommendations.",
+        "document": "PP_Consolidated_CMS SSOE.pdf",
+        "similarity_score": 0.5904271770327288
+      },
+      {
+        "sentence": "The goal was to create a contextual report based on the findings from recipients\u2019 Project Narrative section of their Annual Progress Report (APR) as well as the program activities from their Evaluation and Perf ormance Measurement Plan (EPMP).",
+        "document": "PP_Consolidated_CDC Data Management DHP.pdf",
+        "similarity_score": 0.5816452370335602
+      },
+      {
+        "sentence": "Task 5: Reporting : For reporting, we submit meeting minutes, monthly reports, and an annual report.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.5383561734940662
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 8
+  },
+  {
+    "requirement": "* Assisting in developing program templates, tools, toolkits, and driver diagrams",
+    "matches": [
+      {
+        "sentence": "In this role, we are als o responsible for developing tools to support the work, such as fact sheets, reports, memos, standard operating procedures, quick reference guides, templates, and training material.",
+        "document": "PP_Consolidated_CMS MSS PSS.pdf",
+        "similarity_score": 0.5284056378312744
+      },
+      {
+        "sentence": "In this role, we are also responsible for developing tools to support the work, such as fact sheets, reports, memos, standard operating procedures, quick reference guides, templates, and training material.",
+        "document": "PP_Consolidated_CMS MSS PSS.pdf",
+        "similarity_score": 0.5224372301381983
+      },
+      {
+        "sentence": "In this role, we are also respons ible for developing tools to support the work, such as fact sheets, reports, memos, standard operating procedures, quick reference gui des, templates, and training material.",
+        "document": "PP_Consolidated_CMS MSS PSS.pdf",
+        "similarity_score": 0.48517907191965315
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 9
+  },
+  {
+    "requirement": "* Support stakeholder engagement and training",
+    "matches": [
+      {
+        "sentence": "Stakeholder Collaboration.",
+        "document": "PP_Consolidated_CMS CSMM.pdf",
+        "similarity_score": 0.7126462319031737
+      },
+      {
+        "sentence": "Stakeholder Collaboration.",
+        "document": "PP_Consolidated_CMS SSOE.pdf",
+        "similarity_score": 0.7126462319031737
+      },
+      {
+        "sentence": "Stakeholder Engagement (clients, users, etc.",
+        "document": "PP_Consolidated_NPPES.pdf",
+        "similarity_score": 0.7077746406849278
+      }
+    ],
+    "relevance_score": 2,
+    "assessment": "2 - Significant Relevant Experience",
+    "excel_row_index": 10
+  }
+]

@@ -10,3 +10,4 @@ openai
 scikit-learn
 nltk
 PyPDF2
+openpyxl

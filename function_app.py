@@ -244,7 +244,7 @@ class RMADAAnalyzer:
             connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
             backup_embeddings(
                 embeddings_file_path=self.EMBEDDINGS_JSON,
-                connection_string=connection_string,
+                connection_string="pastperformancev2rg8ee5",
                 container_name="rmada-backups",
                 blob_name="document_embeddings_backup.json"
             )
@@ -333,8 +333,14 @@ class RMADAAnalyzer:
         
         return top_matches
 
-    def assess_relevance(self, requirement: str, matches: List[Dict[str, Any]]) -> str:
-        """Use OpenAI to assess the relevance of matches to the requirement."""
+    def assess_relevance(self, requirement: str, matches: List[Dict[str, Any]]) -> int:
+        """
+        Use OpenAI to assess the relevance of matches to the requirement.
+        
+        :param requirement: The requirement to assess
+        :param matches: List of matching sentences with metadata
+        :return: Integer score (0, 1, or 2) representing relevance
+        """
         # Prepare matches text
         matches_text = ""
         for i, match in enumerate(matches, 1):
@@ -356,7 +362,7 @@ class RMADAAnalyzer:
         
         Please consider the document titles to determine if the work was performed for CMMI. If the title doesn't clearly indicate CMS/CMMI work, be careful about assigning a level 1 rating.
         
-        Provide your rating (0, 1, or 2) with a brief explanation.
+        Provide ONLY a single integer (0, 1, or 2) with no explanation or additional text.
         """
         
         # Add retry mechanism for API calls
@@ -369,13 +375,26 @@ class RMADAAnalyzer:
                 response = self.client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
-                        {"role": "system", "content": "You are an expert in evaluating past performance relevance to requirements for government RFIs."},
+                        {"role": "system", "content": "You are an expert in evaluating past performance relevance to requirements for government RFIs. You must respond with ONLY a single number (0, 1, or 2) with no explanation."},
                         {"role": "user", "content": prompt}
                     ]
                 )
                 
-                return response.choices[0].message.content
+                # Extract response content
+                response_text = response.choices[0].message.content.strip()
                 
+                # Check if the response is a valid integer (0, 1, or 2)
+                if response_text in ["0", "1", "2"]:
+                    return int(response_text)
+                else:
+                    logging.warning(f"Invalid response format: '{response_text}'. Expected '0', '1', or '2'. Retrying...")
+                    if attempt < max_retries - 1:
+                        time.sleep(retry_delay)
+                        retry_delay *= 2  # Exponential backoff
+                    else:
+                        logging.error(f"Failed to get valid response after {max_retries} attempts. Last response: '{response_text}'")
+                        return 0  # Default to 0 if all retries fail
+                        
             except Exception as e:
                 if attempt < max_retries - 1:
                     logging.warning(f"OpenAI API error: {e}. Retrying in {retry_delay} seconds...")
@@ -383,10 +402,15 @@ class RMADAAnalyzer:
                     retry_delay *= 2  # Exponential backoff
                 else:
                     logging.error(f"Failed to get response from OpenAI after {max_retries} attempts: {e}")
-                    return f"Error: Could not assess relevance due to API issues. Error: {str(e)}"
-
+                    return 0  # Default to 0 if all retries fail
+    
     def process_requirements(self, requirements_df: pd.DataFrame) -> List[Dict[str, Any]]:
-        """Process requirements and find matches."""
+        """
+        Process requirements and find matches.
+        
+        :param requirements_df: DataFrame containing requirements
+        :return: List of dictionaries with requirement matches and assessments
+        """
         all_docs = self.process_all_documents()
         
         if not all_docs:
@@ -405,19 +429,30 @@ class RMADAAnalyzer:
         
         for idx, row in requirements_to_process.iterrows():
             requirement = row["SOW Relevance"]
-            logging.info(f"Processing requirement {idx+1}/{len(requirements_df)}: {requirement[:50]}...")
+            logging.info(f"Processing requirement {idx+1}/{len(requirements_to_process)}: {requirement[:50]}...")
             
             # Find related sentences
             matches = self.find_related_sentences(requirement, all_docs, list(all_docs.keys()))
             
-            # Assess relevance using OpenAI
-            assessment = self.assess_relevance(requirement, matches)
+            # Assess relevance using OpenAI - now returns an integer
+            relevance_score = self.assess_relevance(requirement, matches)
+            
+            # Create a human-readable assessment message based on the score
+            if relevance_score == 0:
+                assessment = "0 - No relevant experience"
+            elif relevance_score == 1:
+                assessment = "1 - Some/Indirect Experience (similar work but not for CMS/CMMI, or work for CMS/CMMI but tangential to the RMADA requirements)"
+            elif relevance_score == 2:
+                assessment = "2 - Significant Relevant Experience"
+            else:
+                assessment = f"Invalid score: {relevance_score}"
             
             # Store results
             result = {
                 "requirement": requirement,
                 "matches": matches,
-                "assessment": assessment,
+                "relevance_score": relevance_score,  # Store the numeric score
+                "assessment": assessment,  # Store the human-readable assessment
                 "excel_row_index": idx
             }
             results.append(result)
@@ -431,7 +466,7 @@ def rmada_trigger(req: func.HttpRequest) -> func.HttpResponse:
     try:
         # Hardcode the documents directory and excel file path
         documents_dir = os.path.join(os.getcwd(), "Documents", "sows")
-        excel_path = os.path.join(os.getcwd(), "Documents", "matrices", "requirements.xlsx")
+        excel_path = os.path.join(os.getcwd(), "Documents", "matrices", "RMADA3_SOFTDEV.xlsx")
         
         # Only mode is specified in the request (default to 'test' if not provided)
         mode = req.params.get('mode', 'test')
@@ -440,6 +475,8 @@ def rmada_trigger(req: func.HttpRequest) -> func.HttpResponse:
             mode = req_body.get('mode', mode)
         except ValueError:
             pass
+        
+        logging.info(f"Running in {mode} mode")
         
         # Initialize analyzer
         analyzer = RMADAAnalyzer(documents_dir, excel_path, mode)
@@ -452,25 +489,40 @@ def rmada_trigger(req: func.HttpRequest) -> func.HttpResponse:
                 status_code=400
             )
         
-        # Process requirements
+        logging.info(f"Successfully loaded requirements: {len(requirements_df)} rows")
+        
+        # Process requirements - verify the method exists
+        if not hasattr(analyzer, 'process_requirements'):
+            logging.error("Method 'process_requirements' not found in RMADAAnalyzer class!")
+            return func.HttpResponse(
+                "Internal server error: Method 'process_requirements' not found.",
+                status_code=500
+            )
+        
+        # Call the method
         results = analyzer.process_requirements(requirements_df)
+        
+        # Save results to file
         output_file = f"test_{analyzer.RESULTS_JSON}" if mode == "test" else analyzer.RESULTS_JSON
         with open(output_file, 'w', encoding='utf-8') as json_file:
             json.dump(results, json_file, indent=2)
         
         logging.info(f"Results processed and saved to {output_file}")
+        
+        # Read the content of the results file and return it as the response
+        with open(output_file, 'r', encoding='utf-8') as json_file:
+            results_content = json_file.read()
+        
         return func.HttpResponse(
-            json.dumps({
-                "message": "Analysis complete", 
-                "results_file": output_file, 
-                "num_results": len(results)
-            }),
+            results_content,
             mimetype="application/json",
             status_code=200
         )
     
     except Exception as e:
         logging.error(f"Error in RMADA trigger: {e}")
+        import traceback
+        logging.error(f"Traceback: {traceback.format_exc()}")
         return func.HttpResponse(
             f"An error occurred: {str(e)}",
             status_code=500
