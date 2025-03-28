@@ -16,7 +16,7 @@ import PyPDF2  # For reading PDF files
 nltk.download('punkt', quiet=True)
 
 # Define paths and settings
-DOCUMENTS_DIR = r"C:\Users\Doug Brown\Desktop\Dannys Stuff\Job\Capability Matrix Automation\Documents\rfis\pdf"
+DOCUMENTS_DIR = r"C:\Users\Doug Brown\Desktop\Dannys Stuff\Job\RMADA\Documents\rfis\pdf"
 EXCEL_PATH = "RMADA3_SOFTDEV.xlsx"
 OUTPUT_JSON = "all_sentences.json"
 RESULTS_JSON = "requirement_matches.json"
